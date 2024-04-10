@@ -1,0 +1,28 @@
+name: Push commit
+on: push
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: win11-latest
+    steps:
+      - uses: msys2/setup-msys2@v2
+        with:
+          update: true
+          install: >-
+            wget
+            git
+      - name: Create report file
+        shell: msys2 {0}
+        run: |
+        wget https://github.com/AllSpiceIO/AllSpice-Release/releases/download/v0.7.0/AllSpice-Setup-0.7.0.exe
+        .\AllSpice-Setup-0.7.0.exe
+        scripts/generate-thumbnails.sh
+        
+      - name: Commit report
+        run: |
+          git config --global user.name 'John Simons'
+          git config --global user.email 'johnsel@users.noreply.github.com'
+          git commit -am "Automated thumbnails"
+          git push
