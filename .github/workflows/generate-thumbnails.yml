@@ -16,8 +16,8 @@ jobs:
       - name: Create report file
         shell: msys2 {0}
         run: |
-          wget https://github.com/AllSpiceIO/AllSpice-Release/releases/download/v0.7.0/AllSpice-Setup-0.7.0.exe
-          .\AllSpice-Setup-0.7.0.exe
+          wget https://github.com/AllSpiceIO/AllSpice-Release/releases/download/v0.7.0/AllSpice-Setup-0.7.0.exe /tmp/AllSpice-Setup-0.7.0.exe
+          /tmp/AllSpice-Setup-0.7.0.exe
           scripts/generate-thumbnails.sh
         
       - name: Commit report
