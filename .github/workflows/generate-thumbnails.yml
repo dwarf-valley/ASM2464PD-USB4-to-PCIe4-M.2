@@ -23,6 +23,9 @@ jobs:
           /tmp/AllSpice-Setup-0.7.0.exe
           ls
           scripts/generate-thumbnails.sh
+
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
         
       - name: Commit report
         run: |
