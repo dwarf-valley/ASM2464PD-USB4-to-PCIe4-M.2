@@ -17,9 +17,6 @@ jobs:
             wget
             git
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-                    
       - name: Create report file
         shell: msys2 {0}
         run: |
