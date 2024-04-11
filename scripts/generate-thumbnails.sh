@@ -20,7 +20,7 @@ case "${unameOut}" in
 esac
 
 if [ ${machine} == Win ] || [ ${machine} == MinGw ] || [ ${machine} == Cygwin ]; then 
-  ALLSPICE=~/AppData/Local/Programs/allspice/resources/utils/allspice.dist/allspice
+  ALLSPICE=/c/Users/runneradmin//AppData/Local/Programs/allspice/resources/utils/allspice.dist/allspice
 elif [ ${machine} == Mac ] || [ ${machine} == Linux ]; then 
   ALLSPICE=/Applications/allspice/MacOS/allspice/resources/utils/allspice.dist/allspice
 else
