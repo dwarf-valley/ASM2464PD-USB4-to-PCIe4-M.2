@@ -20,7 +20,7 @@ case "${unameOut}" in
 esac
 
 if [ ${machine} == Win ] || [ ${machine} == MinGw ] || [ ${machine} == Cygwin ]; then 
-  ALLSPICE=/c/Users/runneradmin//AppData/Local/Programs/allspice/resources/utils/allspice.dist/allspice
+  ALLSPICE=/c/Users/runneradmin/AppData/Local/Programs/allspice/resources/utils/allspice.dist/allspice
 elif [ ${machine} == Mac ] || [ ${machine} == Linux ]; then 
   ALLSPICE=/Applications/allspice/MacOS/allspice/resources/utils/allspice.dist/allspice
 else
@@ -42,7 +42,7 @@ allSchematics=$(git ls-files --cached | grep -iE -- '\**.schdoc$|\**.pcbdoc$')
 IFS=$(echo -en "\n\b")
 
 # Render each modified schematic file
-for f in $modifiedSchematics; do 
+for f in $allSchematics; do 
   outfile=".allspice/$f"
   echo "Generating ${outfile}.svg"
   "${ALLSPICE}" convert --svg --no-json --output "$outfile" "$f"
