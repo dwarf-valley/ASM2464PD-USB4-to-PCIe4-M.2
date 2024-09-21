@@ -1,0 +1,13 @@
+Run 1:  wo mrt 27 11:14:36 2024.  Sonn.1.12345.
+        Em version 17.56 (64-bit Windows) on JOHN-PC local.
+
+  Project:  C:\Users\Public\Documents\Altium\ASM2464PD USB4 to PCIe M.2\PCB2.son.
+
+    Begin electromagnetic simulation using frequency sweep:
+      ABS Start = 0, Stop = 5 GHZ
+
+    Post-Analysis:
+      One or more errors detected.
+      See Errors/Warnings for more details.
+
+Analysis failed due to error wo mrt 27 11:15:19 2024.
